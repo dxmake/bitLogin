@@ -18,7 +18,7 @@ class loginManager:
 		urlSrun = '/cgi-bin/srun_portal',
 		n = '200',
 		vType = '1',
-		acID = '1',
+		acID = '8',
 		enc = 'srun_bx1',
 		callbackPrefix = 'jQuery1124019502944455313276_'
 	):
@@ -143,3 +143,26 @@ class loginManager:
 		respJson = json.loads(respStr[prefixLen:-postfixLen])
 		# print(respJson)
 		return respJson
+
+	def _test(self):
+		print('---> Test')
+
+		self.username = '0000000000'
+		self.password = '00000000'
+
+		self.__getUserInfo()
+		print(self.userInfo)
+		
+		self.__getChallenge()
+		print(self.challenge)
+
+		self.__srunLogin()
+		print(self.srunResponse)
+
+		# self.logout()
+		# print(self.srunResponse)
+
+
+if __name__ == '__main__':
+	bit = loginManager()
+	bit._test()
