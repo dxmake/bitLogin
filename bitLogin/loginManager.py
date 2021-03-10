@@ -18,7 +18,7 @@ class loginManager:
 		urlSrun = '/cgi-bin/srun_portal',
 		n = '200',
 		vType = '1',
-		acID = '8',
+		acID = '1',
 		enc = 'srun_bx1',
 		callbackPrefix = 'jQuery1124019502944455313276_'
 	):
